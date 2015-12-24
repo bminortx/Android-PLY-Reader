@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OpenGL: PLY Loader</string>
+
+    <string name="dummy_button">Reset View</string>
+</resources>

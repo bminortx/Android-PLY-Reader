@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#0099cc"
+             tools:context=".FullscreenActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="To rotate: Drag finger across screen \n To scale: move two fingers towards or away each other."
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal|bottom"
+            android:padding="10dp"
+            android:textSize="15dp"/>
+
+        <com.graphics.openglgui.GLView
+            android:id="@+id/gl_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+                      style="?metaButtonBarStyle"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_gravity="center_horizontal|bottom"
+                      android:background="@color/black_overlay"
+                      android:orientation="horizontal"
+                      tools:ignore="UselessParent">
+
+            <Button android:id="@+id/dummy_button"
+                    style="?metaButtonBarButtonStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/dummy_button"
+                    android:clickable="true"
+                    android:nestedScrollingEnabled="true"
+                    android:onClick="Reset"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+</FrameLayout>
