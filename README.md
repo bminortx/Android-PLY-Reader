@@ -3,7 +3,7 @@
 This program allows the user to view ASCII .ply files on their phone
 using OpenGL ES.
 
-![PLY Reader GUI](https://gifs.com/gif/n5Z0AW)
+![PLY Reader GUI](https://j.gifs.com/n5Z0AW.gif)
 
 ## How to Use ##
 
